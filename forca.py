@@ -18,7 +18,20 @@ class Forca():
         'planeta',
         'cidade',
         'carro',
-        'animal'
+        'animal',
+        'macaco',
+        'cachorro',
+        'gato',
+        'cobra',
+        'roda',
+        'quadrado',
+        'cama',
+        'tapete',
+        'cadeira',
+        'mesa',
+        'cozinha',
+        'areia',
+        'praia'
     )
 
 
@@ -108,7 +121,7 @@ class Forca():
         print()
         print('Deseja jogar novamente?')
         print()
-        
+
         resposta = input('Digite s ou n: ')
         if resposta == 's':
             self.jogar()
