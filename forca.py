@@ -10,6 +10,7 @@ Primeiramente vamos dividir o jogo da forca em funções menores:
 
 Posteriormente adicionar um personagem igual o jogo da forca clássico
 '''
+import random
 
 class Jogar():
 
@@ -19,3 +20,9 @@ class Jogar():
         'carro',
         'animal'
     )
+
+    palavra = random.choice(palavras)
+
+    def exibição_letras(self, palavra, letras_acertadas = (False ,)):
+        pass
+ 
