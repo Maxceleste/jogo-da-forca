@@ -50,7 +50,10 @@ class Jogar():
     
 
     def letra_certa(self, letra = str, palavra = str):
-        pass
+        '''
+        Função que retorn True se a letra está na palavra ou False se a letra não está.
+        '''
+        return letra in palavra
             
 
 
@@ -58,4 +61,4 @@ class Jogar():
 
 if __name__ == '__main__':
     j = Jogar()
-    print(j.exibição_letras('teste'))
+    print(j.letra_certa('a', 'teste'))
