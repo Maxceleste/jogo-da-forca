@@ -21,8 +21,41 @@ class Jogar():
         'animal'
     )
 
+
     palavra = random.choice(palavras)
 
-    def exibição_letras(self, palavra, letras_acertadas = (False ,)):
+
+    def exibição_letras(self, palavra = str, letras_acertadas = False):
+        '''
+        Função que retorna a exibição da palavra para o jogo da forca
+
+        Tem dois argumentos, uma string que é a palavra selecionada e é pbrigatório, e uma tupla que indica
+        quais as letras que o jogador chutou certo, não sendo obrigatório. Caso não tenha chutado certa nenhuma
+        letra, o código não irá informar as letras acertadas, retornando apenas todas as palavras sublinhadas.
+        '''
+        
+        if not letras_acertadas:
+            palavra_escondida = ' _ ' * len(palavra)
+            return palavra_escondida
+        
+        else:
+            lista_de_letras = list(palavra)
+            palavra_escondida = palavra
+            
+            for letra in lista_de_letras:
+                if not letra in letras_acertadas:
+                    palavra_escondida = palavra_escondida.replace(letra, ' _ ')
+                    
+            return palavra_escondida
+    
+
+    def letra_certa(self, letra = str, palavra = str):
         pass
+            
+
+
  
+
+if __name__ == '__main__':
+    j = Jogar()
+    print(j.exibição_letras('teste'))
